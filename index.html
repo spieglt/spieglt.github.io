@@ -2,42 +2,7 @@
 <html>
 <head>
     <title>Adequate Systems - Theron Spiegl</title>
-    <style>
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .project {
-            flex: 5 250px;
-            margin-top: 20px;
-        }
-        .line {
-            border-left: 2px solid gray;
-        }
-        .gutter {
-            flex: 1 20px;
-        }
-        .halfgutter {
-            flex: 1 10px;
-        }
-        .with-subtitle {
-            margin-bottom: 0px;
-        }
-        .description {
-            text-indent: 25px;
-        }
-        @media all and (max-width: 600px) {
-            .container {flex-direction: row}
-            .project {flex: 100%;}
-            .line {border-top: 2px solid gray; flex: 100%;}
-            .gutter {display: none;}
-            .halfgutter {height: 20px}
-        }
-        footer {
-            text-align: right;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <center>
@@ -60,7 +25,7 @@
             <p class="description">Wireless, encrypted file transfer over automatically configured ad hoc networking. No network infrastructure required (access point, router, switch).
             Just two laptops with wireless chips in close range.
             Don't have a flash drive? Don't have access to a wireless network or don't trust one?
-            Need to move a file larger than 2GB between different filesystems but don't want to set up a file share? Try it out!
+            Need to move a file larger than 2GB between different filesystems but don't want to set up a file share? Try it out! Written mostly in Go.
             <ul>
                 <li>Transfer multiple files at once, without losing progress if the transfer is interrupted or canceled.</li>
                 <li>Speeds over 120mbps (with laptops close together).</li>
@@ -88,7 +53,7 @@
             set a password, and choose where to save it. To decrypt, drop the encrypted file on the window,
             enter the password, and choose the output location. (Tip: decrypt to a ramdisk for temporary use to avoid
             writing data to permanent storage.) No installation required! On Windows it's a single .exe, on Mac a standard
-            <code>.app</code> bundle, and on Linux a single executable <code>.run</code> file.
+            <code>.app</code> bundle, and on Linux a single executable <code>.run</code> file. Core written in Rust with a C++ Qt frontend.
             <center><img style="border: 1px solid black; width: 100%" src="cloaker.gif"></center>
         </div>
         <div class="gutter"></div>
