@@ -3,15 +3,23 @@
 <head>
     <title>Adequate Systems - Theron Spiegl</title>
     <style>
-        .project {
-            flex: 5 1 250px;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
+        .project {
+            flex: 5 250px;
+            margin-top: 20px;
+        }
+        .line {
+            border-left: 2px solid gray;
+        }
         .gutter {
-            flex: 1 0 20px;
+            flex: 1 20px;
         }
         .halfgutter {
-            flex: 1 0 10px;
+            flex: 1 10px;
         }
         .with-subtitle {
             margin-bottom: 0px;
@@ -19,24 +27,29 @@
         .description {
             text-indent: 25px;
         }
-        @media all and (max-width: 580px) {
-            .line {display: none;}
-            .halfgutter {display: none;}
+        @media all and (max-width: 600px) {
+            .container {flex-direction: row}
+            .project {flex: 100%;}
+            .line {border-top: 2px solid gray; flex: 100%;}
             .gutter {display: none;}
+            .halfgutter {height: 20px}
+        }
+        footer {
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <center>
-    <h1 class="with-subtitle">Adequate Systems</h1>
-    <h3 style="margin-top: 0px">Hopefully Helpful Software</h3>
-    <div style="width: 80%">
-        My first career as an IT consultant/sysadmin/network engineer was made possible by high-quality freeware generously developed by volunteers.
-        I try to return the favor when I have ideas for easy-to-use, cross-platform utilities that ought to already exist.
-        I prefer single-file executables (or <code>.app</code> bundles on Mac) when possible so they can be carried on a flash drive and don't require installers.
-    </div>
+        <h1 class="with-subtitle">Adequate Systems</h1>
+        <h3 style="margin-top: 0px">Hopefully Helpful Software</h3>
+        <div style="width: 80%">
+            My first career as an IT consultant/sysadmin/network engineer was made possible by high-quality freeware generously developed by volunteers.
+            I try to return the favor when I have ideas for easy-to-use, cross-platform utilities that ought to already exist.
+            I prefer single-file executables (or <code>.app</code> bundles on Mac) when possible so they can be carried on a flash drive and don't require installers.
+        </div>
     </center>
-    <div style="display: flex; flex-wrap: wrap; margin-top: 20px">
+    <div class="container">
         <div class="gutter"></div>
         <!-- Flying Carpet -->
         <div class="project">
@@ -61,8 +74,9 @@
         </div>
 
         <div class="halfgutter"></div>
-            <div class="line" style="border-left: 2px solid gray"></div>
+            <div class="line"></div>
         <div class="halfgutter"></div>
+
         <!-- Cloaker -->
         <div class="project">
             <center>
@@ -79,5 +93,6 @@
         </div>
         <div class="gutter"></div>
     </div>
+    <footer><a href="about.html">About Me</a></footer>
 </body>
 </html>
