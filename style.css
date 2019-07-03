@@ -30,6 +30,9 @@
     .gutter {display: none;}
     .halfgutter {height: 20px}
 }
+li {
+    margin-bottom: 10px;
+}
 footer {
     text-align: right;
 }
