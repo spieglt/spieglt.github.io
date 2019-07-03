@@ -1,8 +1,83 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>You must complete the system</title>
+    <title>Adequate Systems - Theron Spiegl</title>
+    <style>
+        .project {
+            flex: 5 1 250px;
+            margin-top: 20px;
+        }
+        .gutter {
+            flex: 1 0 20px;
+        }
+        .halfgutter {
+            flex: 1 0 10px;
+        }
+        .with-subtitle {
+            margin-bottom: 0px;
+        }
+        .description {
+            text-indent: 25px;
+        }
+        @media all and (max-width: 580px) {
+            .line {display: none;}
+            .halfgutter {display: none;}
+            .gutter {display: none;}
+        }
+    </style>
 </head>
 <body>
-<img src="pic.jpg">
+    <center>
+    <h1 class="with-subtitle">Adequate Systems</h1>
+    <h3 style="margin-top: 0px">Hopefully Helpful Software</h3>
+    <div style="width: 80%">
+        My first career as an IT consultant/sysadmin/network engineer was made possible by high-quality freeware generously developed by volunteers.
+        I try to return the favor when I have ideas for easy-to-use, cross-platform utilities that ought to already exist.
+        I prefer single-file executables (or <code>.app</code> bundles on Mac) when possible so they can be carried on a flash drive and don't require installers.
+    </div>
+    </center>
+    <div style="display: flex; flex-wrap: wrap; margin-top: 20px">
+        <div class="gutter"></div>
+        <!-- Flying Carpet -->
+        <div class="project">
+            <center>
+            <h2 class="with-subtitle">Flying Carpet</h2>
+            <a href="https://github.com/spieglt/flyingcarpet/releases">Download</a>
+            </center>
+            <p class="description">Wireless, encrypted file transfer over automatically configured ad hoc networking. No network infrastructure required (access point, router, switch).
+            Just two laptops with wireless chips in close range.
+            Don't have a flash drive? Don't have access to a wireless network or don't trust one?
+            Need to move a file larger than 2GB between different filesystems but don't want to set up a file share? Try it out!
+            <ul>
+                <li>Transfer multiple files at once, without losing progress if the transfer is interrupted or canceled.</li>
+                <li>Speeds over 120mbps (with laptops close together).</li>
+                <li>Does not use Bluetooth or your local network, just wireless chip to wireless chip.</li>
+                <li>Files encrypted in transit.</li>
+                <li>Large files supported (&lt10MB RAM usage while transferring a 4.5GB file).</li>
+                <li>No installation required and no dependencies needed.</li>
+                <li>Interoperable GUI and CLI versions.</li>
+            </ul>
+            <center><img style="width: 70%" src="flyingCarpet.png"></center>
+        </div>
+
+        <div class="halfgutter"></div>
+            <div class="line" style="border-left: 2px solid gray"></div>
+        <div class="halfgutter"></div>
+        <!-- Cloaker -->
+        <div class="project">
+            <center>
+            <h2 class="with-subtitle">Cloaker</h2>
+            <a href="https://github.com/spieglt/cloaker/releases">Download</a>
+            </center>
+            <p class="description">Have you ever wanted to protect a file with a password and found it unnecessarily difficult to do so?
+            Cloaker aims to provide the easiest, simplest file encryption possible. Just drop a file onto the window,
+            set a password, and choose where to save it. To decrypt, drop the encrypted file on the window,
+            enter the password, and choose the output location. (Tip: decrypt to a ramdisk for temporary use to avoid
+            writing data to permanent storage.) No installation required! On Windows it's a single .exe, on Mac a standard
+            <code>.app</code> bundle, and on Linux a single executable <code>.run</code> file.
+            <center><img style="border: 1px solid black; width: 100%" src="cloaker.gif"></center>
+        </div>
+        <div class="gutter"></div>
+    </div>
 </body>
 </html>
